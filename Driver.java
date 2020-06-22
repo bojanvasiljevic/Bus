@@ -1,4 +1,4 @@
-package autobuska;
+package bus;
 
 /**
  * Vozac je covek koji poseduje i zvanje (zanimanje -> sofer).
@@ -10,9 +10,9 @@ public class Driver extends Man {
 
 	private String profession;
 
-	public Driver(String name, String lastName, String profession) {
+	public Driver(String name, String lastName) {
 		super(name, lastName);
-		this.profession = profession;
+		
 	}
 
 	public String getProfession() {

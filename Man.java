@@ -1,4 +1,4 @@
-package autobuska;
+package bus;
 
 /**
  * Covek poseduje ime i prezime koji se dodeljuju prilikom kreiranja objekta.

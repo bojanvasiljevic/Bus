@@ -1,4 +1,4 @@
-package autobuska;
+package bus;
 
 /**
  * Putnik je covek koji poseduje novac. Inicijalno poseduje odredjenu kolicinu

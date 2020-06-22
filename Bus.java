@@ -1,4 +1,4 @@
-package autobuska;
+package bus;
 
 /**
  * Autobus poseduje naziv, vozaca, cenu karte i listu putnika koji se njime
@@ -31,9 +31,9 @@ public class Bus {
 		id = BUS_ID;
 		BUS_ID = getRandom();
 	}
-	
+
 	public int getRandom() {
-		return ((int) (Math.random()*(100000-1)))+1;
+		return ((int) (Math.random() * (100000 - 1))) + 1;
 	}
 
 	public String getBusName() {
@@ -71,6 +71,11 @@ public class Bus {
 	}
 
 	public boolean addPassinger(Passinger passingerName) {
+		for (Passinger name : passingerList) {
+			if (name == passingerName) {
+				return false;
+			}
+		}
 		passingerList.add(passingerName);
 		return true;
 	}
