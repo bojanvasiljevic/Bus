@@ -5,24 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-	/*
-	 * Passinger passinger1 = new Passinger("John", "Johnson", 5000); Passinger
-	 * passinger2 = new Passinger("David", "Gray", 1000); Passinger passinger3 = new
-	 * Passinger("Paul", "McCartney", 1653); Passinger passinger4 = new
-	 * Passinger("Iggy", "Pop", 159);
-	 * 
-	 * Driver driver1 = new Driver("Paul", "Robinson", "Bus driver"); Driver driver2
-	 * = new Driver("Robin", "Paulson", "Bus driver");
-	 * 
-	 * Bus bus1 = new Bus("Lasta", 565); Bus bus2 = new Bus("Belegija", 122); Bus
-	 * bus3 = new Bus("Raketa", 789);
-	 * 
-	 * bus1.addPassinger(passinger1); bus1.addPassinger(passinger2);
-	 * bus1.addPassinger(passinger3);
-	 * 
-	 * System.out.println(bus1); bus1.addDriver(driver1);
-	 * bus1.addPassinger(passinger4);
-	 */
 
 	public static void main(String[] args) {
 
@@ -34,8 +16,13 @@ public class Main {
 		while (loopCheck) {
 			System.out.println("Create another bus line Y/N");
 			String onOff = s.next();
+			while (!onOff.toUpperCase().equals("Y") && !onOff.toUpperCase().equals("N")) {
+				System.out.println("Error!!! Please select Y or N in order to proceed!!!");
+				onOff = s.next();
+			}
 			if (onOff.toUpperCase().equals("N")) {
 				loopCheck = false;
+				System.out.println("Program had shut down");
 				continue;
 			} else {
 				System.out.println("Enter Bus name and press enter:  ");
@@ -88,23 +75,37 @@ public class Main {
 				} while (passingerAdd);
 				int switchOptions;
 				do {
-				System.out.println("Select one of the following options");
-				System.out.println("1. View passinger list");
-				System.out.println("2. Charge ticket to passingers");
-				System.out.println("0. to exit meny");
-				switchOptions = s.nextInt();
-				
+					System.out.println("Select one of the following options");
+					System.out.println("1. View passinger list");
+					System.out.println("2. Charge ticket to passingers");
+					System.out.println("3. View ID number");
+					System.out.println("0. to exit meny");
+					switchOptions = s.nextInt();
+
 					switch (switchOptions) {
+					case 0:
+						switchOptions = 0;
+						break;
 					case 1:
+						System.out.println();
+						System.out.print("***Passinger list: ");
 						System.out.println(Arrays.toString(bus1.getPassingerList().toArray()));
+						System.out.println();
 						break;
 					case 2:
 						bus1.ticketCharge();
 						break;
+					case 3:
+						System.out.println(bus1.getID());
+						break;
+					default:
+						System.out.println("***********************************************************");
+						System.out.println("*    Eror you have to select one of the stated options    *");
+						System.out.println("***********************************************************");
 
 					}
-				}while(switchOptions !=0);
-				
+				} while (switchOptions != 0);
+
 			}
 
 		}

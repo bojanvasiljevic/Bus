@@ -1,11 +1,6 @@
 package bus;
 
-/**
- * Vozac je covek koji poseduje i zvanje (zanimanje -> sofer).
- * 
- * @author Bojan
- *
- */
+
 public class Driver extends Man {
 
 	private String profession;

@@ -1,13 +1,6 @@
 package bus;
 
-/**
- * Putnik je covek koji poseduje novac. Inicijalno poseduje odredjenu kolicinu
- * novca koja mu se zadaje prilikom kreiranja. Odredjena svota novca moze da mu
- * se doda i/ili oduzme, gde je potrebno vratiti indikator uspesnosti.
- * 
- * @author Bojan
- *
- */
+
 public class Passinger extends Man {
 
 	private float money;

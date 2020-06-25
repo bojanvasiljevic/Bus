@@ -16,7 +16,6 @@ import java.util.Arrays;
 import org.w3c.dom.ls.LSInput;
 
 public class Bus {
-	private static int BUS_ID = 1;
 
 	private String busName;
 	private Driver driverName;
@@ -28,8 +27,8 @@ public class Bus {
 		this.busName = busName;
 		this.ticketPrice = ticketPrice;
 		passingerList = new ArrayList<Passinger>();
-		id = BUS_ID;
-		BUS_ID = getRandom();
+		id = getRandom();
+
 	}
 
 	public int getRandom() {
